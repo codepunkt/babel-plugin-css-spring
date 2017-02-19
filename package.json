@@ -1,0 +1,31 @@
+{
+  "name": "babel-plugin-css-spring",
+  "version": "0.1.0",
+  "main": "lib/index.js",
+  "repository": "https://github.com/codepunkt/babel-plugin-css-spring.git",
+  "author": "Christoph Werner <christoph@codepunkt.de>",
+  "license": "MIT",
+  "scripts": {
+    "clean": "rm -rf lib",
+    "build": "babel src -d lib",
+    "test": "mocha --compilers js:babel-register",
+    "test:watch": "npm run test -- --watch",
+    "prepublish": "npm run clean && npm run build"
+  },
+  "peerDependencies": {
+    "babel-core": "^6.23.1",
+    "babel-template": "^6.23.0",
+    "babel-types": "^6.23.0"
+  },
+  "devDependencies": {
+    "babel-cli": "^6.23.0",
+    "babel-preset-latest": "^6.22.0",
+    "mocha": "^3.2.0"
+  },
+  "dependencies": {
+    "css-spring": "^4.1.0"
+  },
+  "keywords": [
+    "babel-plugin"
+  ]
+}
